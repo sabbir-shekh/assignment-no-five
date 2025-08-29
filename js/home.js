@@ -24,8 +24,9 @@ let coins = 100;
           coins -= 20; 
           coinDisplay.textContent = coins;
         } else {
-          alert("Not enough coins!");
+           alert('You don’t have enough coins to make this call!');
         }
+       
       });
     }
     // coin counnt function off
@@ -60,7 +61,7 @@ let coins = 100;
 
     //জাতীয় জরুরি সেবা
 document.getElementById("call-btn").addEventListener('click', function(){
-
+       alert('Calling: National Emergency - 999')
 const data ={
     name: "জাতীয় জরুরি সেবা",
 call: "999",
@@ -71,6 +72,7 @@ historyData.push(data)
 
 //পুলিশ
 document.getElementById("police").addEventListener('click', function(){
+    alert('Calling: Police - 999')
 const data ={
     name: "পুলিশ",
 call: "999",
@@ -83,6 +85,7 @@ historyData.push(data)
 
 //ফায়ার সার্ভিস
 document.getElementById("fire").addEventListener('click', function(){
+     alert('Calling:Fire Service - 999')
 const data ={
     name: "ফায়ার সার্ভিস",
 call: "999",
@@ -95,7 +98,7 @@ historyData.push(data)
 
    
 document.getElementById("ambulance").addEventListener('click', function(){
-
+alert('Calling:Ambulance - 1994-999999')
 const data ={
     name: "অ্যাম্বুলেন্স",
 call: "1994-999999",
@@ -106,6 +109,7 @@ historyData.push(data)
 
 
 document.getElementById("helpline").addEventListener('click', function(){
+    alert('Calling:Women & Child Helpline - 109')
 const data ={
     name: "নারী ও শিশু সহায়তা",
 call: "109",
@@ -118,6 +122,7 @@ historyData.push(data)
 
 
 document.getElementById("anti").addEventListener('click', function(){
+    alert('Calling:Women & Anti-Corruption - 106')
 const data ={
     name: "দুদক",
 call: "106",
@@ -129,6 +134,8 @@ historyData.push(data)
 
 
 document.getElementById("electricity").addEventListener('click', function(){
+    alert('Calling:Electricity Outage - 16216')
+
 const data ={
     name: "বিদ্যুৎ বিভ্রাট",
 call: "16216",
@@ -140,6 +147,7 @@ historyData.push(data)
 
 
 document.getElementById("brac").addEventListener('click', function(){
+    alert('Calling:Brac - 16445')
 const data ={
     name: "ব্র্যাক",
 call: "16445",
@@ -151,6 +159,7 @@ historyData.push(data)
 
 
 document.getElementById("railway").addEventListener('click', function(){
+     alert('Calling:Bangladesh Railway- 163')
 const data ={
     name: "বাংলাদেশ রেলওয়ে",
 call: "163",
