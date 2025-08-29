@@ -69,7 +69,7 @@ call: "999",
 historyData.push(data)
 })
 
-
+//পুলিশ
 document.getElementById("police").addEventListener('click', function(){
 const data ={
     name: "পুলিশ",
@@ -81,34 +81,87 @@ historyData.push(data)
 })
 
 
+//ফায়ার সার্ভিস
+document.getElementById("fire").addEventListener('click', function(){
+const data ={
+    name: "ফায়ার সার্ভিস",
+call: "999",
+    date:new Date().toLocaleTimeString()
+}
+historyData.push(data)
+
+})
 
 
-//  function addCall() {
-//       const now = new Date();
-//       const time = now.toLocaleTimeString();
-    
+   
+document.getElementById("ambulance").addEventListener('click', function(){
 
-//       const card = document.createElement("div");
-//       card.innerHTML = `
-//          <div class="flex justify-between  p-2 bg-[#F2F2F2] px-3 items-center rounded-[10px] m-[15px] ">
-// <div>
-//     <h1 class="text-[14px]">জাতীয় জরুরি সেবা</h1>
-//         <p class="text-[#5C5C5C]">999</p>
-// </div>
+const data ={
+    name: "অ্যাম্বুলেন্স",
+call: "1994-999999",
+    date:new Date().toLocaleTimeString()
+}
+historyData.push(data)
+})
 
 
-// <div>
-//     <p>${data.date}</p>
-// </div>
+document.getElementById("helpline").addEventListener('click', function(){
+const data ={
+    name: "নারী ও শিশু সহায়তা",
+call: "109",
+    date:new Date().toLocaleTimeString()
+}
+historyData.push(data)
 
-//         </div>
-//       `;
-//       document.getElementById("callHistory").appendChild(card);
-//     }
+})
 
-//     function clearHistory() {
-//       document.getElementById("callHistory").innerHTML = "";
-//     }
+
+
+document.getElementById("anti").addEventListener('click', function(){
+const data ={
+    name: "ফায়ার সার্ভিস",
+call: "999",
+    date:new Date().toLocaleTimeString()
+}
+historyData.push(data)
+
+})
+
+
+document.getElementById("electricity").addEventListener('click', function(){
+const data ={
+    name: "বিদ্যুৎ বিভ্রাট",
+call: "16216",
+    date:new Date().toLocaleTimeString()
+}
+historyData.push(data)
+
+})
+
+
+document.getElementById("brac").addEventListener('click', function(){
+const data ={
+    name: "ব্র্যাক",
+call: "16445",
+    date:new Date().toLocaleTimeString()
+}
+historyData.push(data)
+
+})
+
+
+document.getElementById("railway").addEventListener('click', function(){
+const data ={
+    name: "বাংলাদেশ রেলওয়ে",
+call: "163",
+    date:new Date().toLocaleTimeString()
+}
+historyData.push(data)
+
+})
+
+
+
 
 
 
@@ -148,6 +201,197 @@ historyContainer.innerText =""
 
 
     document.getElementById("police").addEventListener('click', function(){
+    const historyContainer = document.getElementById("history-container")
+historyContainer.innerText =""
+
+
+    for ( const data of historyData){
+        const div = document.createElement("div")
+        div.innerHTML = `
+
+<div class="flex justify-between  p-2 bg-[#F2F2F2] px-3 items-center rounded-[10px] m-[15px] ">
+ <div>
+     <h1 class="text-[14px]">${data.name}</h1>
+         <p class="text-[#5C5C5C]">${data.call}</p>
+</div>
+
+
+ <div>
+     <p>${data.date}</p>
+ </div>
+       </div>   `
+        historyContainer.appendChild(div)
+             
+    }
+    
+})
+
+
+
+    document.getElementById("fire").addEventListener('click', function(){
+    const historyContainer = document.getElementById("history-container")
+historyContainer.innerText =""
+
+
+    for ( const data of historyData){
+        const div = document.createElement("div")
+        div.innerHTML = `
+
+<div class="flex justify-between  p-2 bg-[#F2F2F2] px-3 items-center rounded-[10px] m-[15px] ">
+ <div>
+     <h1 class="text-[14px]">${data.name}</h1>
+         <p class="text-[#5C5C5C]">${data.call}</p>
+</div>
+
+
+ <div>
+     <p>${data.date}</p>
+ </div>
+       </div>   `
+        historyContainer.appendChild(div)
+             
+    }
+    
+})
+
+
+
+    document.getElementById("ambulance").addEventListener('click', function(){
+    const historyContainer = document.getElementById("history-container")
+historyContainer.innerText =""
+
+
+    for ( const data of historyData){
+        const div = document.createElement("div")
+        div.innerHTML = `
+
+<div class="flex justify-between  p-2 bg-[#F2F2F2] px-3 items-center rounded-[10px] m-[15px] ">
+ <div>
+     <h1 class="text-[14px]">${data.name}</h1>
+         <p class="text-[#5C5C5C]">${data.call}</p>
+</div>
+
+
+ <div>
+     <p>${data.date}</p>
+ </div>
+       </div>   `
+        historyContainer.appendChild(div)
+             
+    }
+    
+})
+
+
+
+    document.getElementById("helpline").addEventListener('click', function(){
+    const historyContainer = document.getElementById("history-container")
+historyContainer.innerText =""
+
+
+    for ( const data of historyData){
+        const div = document.createElement("div")
+        div.innerHTML = `
+
+<div class="flex justify-between  p-2 bg-[#F2F2F2] px-3 items-center rounded-[10px] m-[15px] ">
+ <div>
+     <h1 class="text-[14px]">${data.name}</h1>
+         <p class="text-[#5C5C5C]">${data.call}</p>
+</div>
+
+
+ <div>
+     <p>${data.date}</p>
+ </div>
+       </div>   `
+        historyContainer.appendChild(div)
+             
+    }
+    
+})
+
+
+    document.getElementById("anti").addEventListener('click', function(){
+    const historyContainer = document.getElementById("history-container")
+historyContainer.innerText =""
+
+
+    for ( const data of historyData){
+        const div = document.createElement("div")
+        div.innerHTML = `
+
+<div class="flex justify-between  p-2 bg-[#F2F2F2] px-3 items-center rounded-[10px] m-[15px] ">
+ <div>
+     <h1 class="text-[14px]">${data.name}</h1>
+         <p class="text-[#5C5C5C]">${data.call}</p>
+</div>
+
+
+ <div>
+     <p>${data.date}</p>
+ </div>
+       </div>   `
+        historyContainer.appendChild(div)
+             
+    }
+    
+})
+
+
+    document.getElementById("electricity").addEventListener('click', function(){
+    const historyContainer = document.getElementById("history-container")
+historyContainer.innerText =""
+
+
+    for ( const data of historyData){
+        const div = document.createElement("div")
+        div.innerHTML = `
+
+<div class="flex justify-between  p-2 bg-[#F2F2F2] px-3 items-center rounded-[10px] m-[15px] ">
+ <div>
+     <h1 class="text-[14px]">${data.name}</h1>
+         <p class="text-[#5C5C5C]">${data.call}</p>
+</div>
+
+
+ <div>
+     <p>${data.date}</p>
+ </div>
+       </div>   `
+        historyContainer.appendChild(div)
+             
+    }
+    
+})
+
+    document.getElementById("brac").addEventListener('click', function(){
+    const historyContainer = document.getElementById("history-container")
+historyContainer.innerText =""
+
+
+    for ( const data of historyData){
+        const div = document.createElement("div")
+        div.innerHTML = `
+
+<div class="flex justify-between  p-2 bg-[#F2F2F2] px-3 items-center rounded-[10px] m-[15px] ">
+ <div>
+     <h1 class="text-[14px]">${data.name}</h1>
+         <p class="text-[#5C5C5C]">${data.call}</p>
+</div>
+
+
+ <div>
+     <p>${data.date}</p>
+ </div>
+       </div>   `
+        historyContainer.appendChild(div)
+             
+    }
+    
+})
+
+
+    document.getElementById("railway").addEventListener('click', function(){
     const historyContainer = document.getElementById("history-container")
 historyContainer.innerText =""
 

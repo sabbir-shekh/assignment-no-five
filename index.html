@@ -1,5 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Hotline</title>
+
+    <!-- tailwind css cnd -->
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <!-- font awesome cdn -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- style.css -->
+ <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+
+
+<body class="bg-[#DFEFFF]  ">
+    <!-- navagation ber -->
+    <nav class="lg:flex justify-between items-center  bg-[white] ">
+        <div class="flex  items-center ">
+            <div ><img src="./assets/logo.png" alt="" class="lg:w-[50px] w-[30px] lg:h-[50px] "></div>
+            <div class="ml-5 w-[136px] h-[45px] font-extrabold text-[#006747]"><h1>Emergency <br> Service</h1></div>
+        </div>
+
+        <div class="lg:flex justify-around items-center lg:gap-7 flex gap-x-2 p-7">
+           <div class="    flex justify-center items-center bg-[#41ff6b1a] lg:w-[123px] w-[70px]  lg:h-[52px] rounded-[50px]">
+              <p id="counter" class="lg:font-bold">0</p>
+            <div class="" ><img src="./assets/heart.png" alt="" class="w-[30px] h-[30px] ml-3"></div>
+           </div>
+           
+           <div class="flex justify-center items-center bg-[#41ff6b1a] lg:w-[106px] w-[80px] lg:h-[52px] h-[30px] rounded-[50px]">
+            <p id="coinCount" class="lg:font-bold ">100</p>
+            <div class=""><img src="./assets/coin.png" alt="" class="w-[24px] h-[24px] ml-3"></div>
+           </div>
+
+           <div class="lg:w-[127px] w-[60px] lg:h-[52px] h-[30px] rounded-[50px] bg-[#00a63e] flex justify-center items-center "><h1 class="text-white text-center lg:text-[18px] text-[10px]"><span id="copyCount">0   </span>Copy</h1></div>
+        </div>
+    </nav>
+
+    <!-- middle section -->
+     <div class="  bg-gradient-to-r from-[rgb(1,49,35)] via-[rgb(0,103,71)] to-[rgb(1,50,35)] w-full min-h-[50px] text-center p-[25px] ">
+        <img src="./assets/logo-dark.png" alt="" class="w-[92px] h-[92px] items-center  mx-auto">
+        <h1 class="font-semibold text-white text-[40px]">জরুরি সেবা ডিরেক্টরি</h1>
+        <p class="font-semibold text-white text-[20px]">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+     </div>
+
+
+     <!-- card section and call history section -->
+     <div class="lg:flex justify-between mb-10 ">
+
+
+        <!-- all card section -->
+        <div class="grid lg:grid-cols-3 gap-3 gap-y-0 items-center mx-auto justify-center">
+       
+            <!-- card no: 1 -->
+      <div class="pera-section  w-[310px] h-[290px] bg-white mt-[48px] rounded-[12px] shadow-md p-[25px]">
+        <div>
+           <div class="flex justify-between  items-center">
+             <img src="./assets/emergency.png" alt="" class="w-[40px] h-[40px] bg-[#FFE3E2] p-[10px] rounded-xl"> 
+             <span class="text-[16px] " onclick="increaseCount()"><i class=" fa-solid fa-heart "></i></span>
+           </div>
+            <h1 class="text-[16px] font-bold pt-[16px]">জাতীয় জরুরি সেবা</h1>
+            <p class="text-[#5C5C5C] text-[14px]">National Emergency</p>
+        </div>
+
+        <div>
+             <h1 id="num1" class="text-[26px]  font-bold pt-[16px]">999</h1>
+            <p class="text-[14px] text-[#5C5C5C] pt-[5px] bg-[#F2F2F2] w-[76px] h-[30px] text-center rounded-full">সার্বজনীন</p>
+        </div>
 
         <div class="button pt-[24px] flex justify-between gap-3 mx-auto">
+<button class="copyBtn w-[180px] h-[30px] border border-[#F2F2F2] rounded-[10px]" data-target="num1"><i class="fa-solid fa-copy " ></i><span class="text-[#5C5C5C] pl-2 text-[14px]">Copy</span></button>
+<button id="call-btn" class=" buyBtn bg-[#00A63E] w-[180px] h-[30px] rounded-[10px]"><i class="fa-solid fa-phone"></i> <span class="text-white pl-1 text-[14px]">Call</span></button>
+        </div>
+      </div>
+
+
+        <!-- card no: 2 -->
+      <div class="pera-section w-[310px] h-[290px] bg-white mt-[48px] rounded-[12px]  shadow-md p-[25px]">
+        <div>
+           <div class="flex justify-between  items-center">
+             <img src="./assets/police.png" alt="" class="w-[40px] h-[40px] bg-[#FFE3E2] p-[10px] rounded-xl"> 
+             <span class="text-[16px] " onclick="increaseCount()"><i class=" fa-solid fa-heart "></i></span>
+           </div>
+            <h1 class="text-[16px] font-bold pt-[16px]">পুলিশ</h1>
+            <p class="text-[#5C5C5C] text-[14px]">Police</p>
+        </div>
+
+        <div>
+             <h1 id="num2" class="text-[26px]  font-bold pt-[16px]">999</h1>
+            <p class="text-[14px] text-[#5C5C5C] pt-[5px] bg-[#F2F2F2] w-[76px] h-[30px] text-center rounded-full">পুলিশ</p>
+        </div>
+
+        <div class="button pt-[24px] flex justify-between gap-3 mx-auto">
+
+
 <button  class= " copyBtn w-[180px] h-[30px] border border-[#F2F2F2] rounded-[10px]" data-target="num2"><i class="fa-solid fa-copy  " ></i><span class="text-[#5C5C5C] pl-2 text-[14px]" >Copy</span></button>
 <button id="police"  class="buyBtn  bg-[#00A63E] w-[180px] h-[30px] rounded-[10px]"><i class="fa-solid fa-phone"></i> <span class="text-white pl-1 text-[14px]">Call</span></button>
         </div>
@@ -11,7 +110,7 @@
         <div>
            <div class="flex justify-between  items-center">
              <img src="./assets/fire-service.png" alt="" class="w-[40px] h-[40px] bg-[#FFE3E2] p-[10px] rounded-xl"> 
-             <span class="text-[16px] "><i class=" fa-solid fa-heart "  onclick="increaseCount()"></i></span>
+             <span class="text-[16px] " ><i class=" fa-solid fa-heart "  onclick="increaseCount()"></i></span>
            </div>
             <h1 class="text-[16px] font-bold pt-[16px]">ফায়ার সার্ভিস</h1>
             <p class="text-[#5C5C5C] text-[14px]">Fire Service</p>
@@ -24,7 +123,7 @@
 
         <div class="button pt-[24px] flex justify-between gap-3 mx-auto">
 <button  class= " copyBtn w-[180px] h-[30px] border border-[#F2F2F2] rounded-[10px]" data-target="num3"><i class="fa-solid fa-copy  " ></i><span class="text-[#5C5C5C] pl-2 text-[14px]" >Copy</span></button>
-<button class="buyBtn  bg-[#00A63E] w-[180px] h-[30px] rounded-[10px]" id="cut-Button"><i class="fa-solid fa-phone"></i> <span class="text-white pl-1 text-[14px]">Call</span></button>
+<button id="fire" class="buyBtn  bg-[#00A63E] w-[180px] h-[30px] rounded-[10px]"><i class="fa-solid fa-phone"></i> <span class="text-white pl-1 text-[14px]">Call</span></button>
         </div>
       </div> 
 
@@ -47,7 +146,7 @@
 
         <div class="button pt-[24px] flex justify-between gap-3 mx-auto">
 <button  class= " copyBtn w-[180px] h-[30px] border border-[#F2F2F2] rounded-[10px]" data-target="num4"><i class="fa-solid fa-copy  " ></i><span class="text-[#5C5C5C] pl-2 text-[14px]" >Copy</span></button>
-<button class="buyBtn bg-[#00A63E] w-[180px] h-[30px] rounded-[10px]" id="cut-Button"><i class="fa-solid fa-phone"></i> <span class="text-white pl-1 text-[14px]">Call</span></button>
+<button id="ambulance" class="buyBtn bg-[#00A63E] w-[180px] h-[30px] rounded-[10px]" ><i class="fa-solid fa-phone"></i> <span class="text-white pl-1 text-[14px]">Call</span></button>
         </div>
       </div>
 
@@ -70,7 +169,7 @@
 
         <div class="button pt-[24px] flex justify-between gap-3 mx-auto">
 <button  class= " copyBtn w-[180px] h-[30px] border border-[#F2F2F2] rounded-[10px]" data-target="num5"><i class="fa-solid fa-copy  " ></i><span class="text-[#5C5C5C] pl-2 text-[14px]" >Copy</span></button>
-<button class="buyBtn bg-[#00A63E] w-[180px] h-[30px] rounded-[10px]" id="cut-Button"><i class="fa-solid fa-phone"></i> <span class="text-white pl-1 text-[14px]">Call</span></button>
+<button id="helpline" class="buyBtn bg-[#00A63E] w-[180px] h-[30px] rounded-[10px]" ><i class="fa-solid fa-phone"></i> <span class="text-white pl-1 text-[14px]">Call</span></button>
         </div>
       </div> 
 
@@ -93,7 +192,7 @@
 
         <div class="button pt-[24px] flex justify-between gap-3 mx-auto">
 <button  class= " copyBtn w-[180px] h-[30px] border border-[#F2F2F2] rounded-[10px]" data-target="num6"><i class="fa-solid fa-copy  " ></i><span class="text-[#5C5C5C] pl-2 text-[14px]" >Copy</span></button>
-<button class="buyBtn bg-[#00A63E] w-[180px] h-[30px] rounded-[10px]" id="cut-Button"><i class="fa-solid fa-phone"></i> <span class="text-white pl-1 text-[14px]">Call</span></button>
+<button id="anti" class="buyBtn bg-[#00A63E] w-[180px] h-[30px] rounded-[10px]" ><i class="fa-solid fa-phone"></i> <span class="text-white pl-1 text-[14px]">Call</span></button>
         </div>
       </div> 
 
@@ -116,7 +215,7 @@
 
         <div class="button pt-[24px] flex justify-between gap-3 mx-auto">
 <button  class= " copyBtn w-[180px] h-[30px] border border-[#F2F2F2] rounded-[10px]" data-target="num7"><i class="fa-solid fa-copy  " ></i><span class="text-[#5C5C5C] pl-2 text-[14px]" >Copy</span></button>
-<button class="buyBtn bg-[#00A63E] w-[180px] h-[30px] rounded-[10px]" id="cut-Button"><i class="fa-solid fa-phone"></i> <span class="text-white pl-1 text-[14px]">Call</span></button>
+<button id="electricity" class="buyBtn bg-[#00A63E] w-[180px] h-[30px] rounded-[10px]" ><i class="fa-solid fa-phone"></i> <span class="text-white pl-1 text-[14px]">Call</span></button>
         </div>
       </div> 
 
@@ -139,7 +238,7 @@
 
         <div class="button pt-[24px] flex justify-between gap-3 mx-auto">
 <button  class= " copyBtn w-[180px] h-[30px] border border-[#F2F2F2] rounded-[10px]" data-target="num8"><i class="fa-solid fa-copy  " ></i><span class="text-[#5C5C5C] pl-2 text-[14px]" >Copy</span></button>
-<button class="buyBtn bg-[#00A63E] w-[180px] h-[30px] rounded-[10px]" id="cut-Button"><i class="fa-solid fa-phone"></i> <span class="text-white pl-1 text-[14px]">Call</span></button>
+<button id="brac" class="buyBtn bg-[#00A63E] w-[180px] h-[30px] rounded-[10px]" ><i class="fa-solid fa-phone"></i> <span class="text-white pl-1 text-[14px]">Call</span></button>
         </div>
       </div> 
 
@@ -163,7 +262,7 @@
 
         <div class="button pt-[24px] flex justify-between gap-3 mx-auto">
 <button  class= " copyBtn w-[180px] h-[30px] border border-[#F2F2F2] rounded-[10px]" data-target="num9"><i class="fa-solid fa-copy  " ></i><span class="text-[#5C5C5C] pl-2 text-[14px]" >Copy</span></button>
-<button class="buyBtn bg-[#00A63E] w-[180px] h-[30px] rounded-[10px]" id="cut-Button"><i class="fa-solid fa-phone"></i> <span class="text-white pl-1 text-[14px]">Call</span></button>
+<button id="railway" class="buyBtn bg-[#00A63E] w-[180px] h-[30px] rounded-[10px]" ><i class="fa-solid fa-phone"></i> <span class="text-white pl-1 text-[14px]">Call</span></button>
         </div>
       </div>
 
@@ -195,18 +294,7 @@
 <div id="history-container">
 
 
-        <div  class="flex justify-between  p-2 bg-[#F2F2F2] px-3 items-center rounded-[10px] m-[15px] ">
-<div>
-    <h1 class="text-[14px]">জাতীয় জরুরি সেবা</h1>
-        <p class="text-[#5C5C5C]">999</p>
-</div>
-
-
-<div>
-    <p>11:36:58 AM</p>
-</div>
-
-        </div>
+    
         </div>
       </div>
 
