@@ -119,8 +119,8 @@ historyData.push(data)
 
 document.getElementById("anti").addEventListener('click', function(){
 const data ={
-    name: "ফায়ার সার্ভিস",
-call: "999",
+    name: "দুদক",
+call: "106",
     date:new Date().toLocaleTimeString()
 }
 historyData.push(data)
@@ -421,9 +421,12 @@ historyContainer.innerText =""
 
 
 
+ 
 
-
-
+ document.getElementById("clearBtn").addEventListener('click', function History () { 
+      document.getElementById("history-container").innerHTML = " ";
+    });
+    
 
 
 
