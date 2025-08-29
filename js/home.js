@@ -39,11 +39,11 @@ let coins = 100;
 
     for (let button of buttons) {
       button.addEventListener("click", function() {
-        // data-target থেকে p এর id পেলাম
+        
         const targetId = this.getAttribute("data-target");
         const number = document.getElementById(targetId).textContent;
 
-        // নাম্বার কপি করো
+        
         navigator.clipboard.writeText(number)
           .then(() => {
             copyCount++;
@@ -431,26 +431,8 @@ historyContainer.innerText =""
 
 
  
-
+// clear history
  document.getElementById("clearBtn").addEventListener('click', function History () { 
       document.getElementById("history-container").innerHTML = " ";
     });
     
-
-
-
-//     document.getElementById("transjection-button").addEventListener('click', function(){
-//     const transactionContainer = document.getElementById("transaction-container")
-// transactionContainer.innerText =""
-
-
-//     for ( const data of transactionData){
-//         const div = document.createElement("div")
-//         div.innerHTML = ``
-
-
-
-
-//         }
-    
-// })
