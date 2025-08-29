@@ -1,0 +1,49 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style2.css">
+</head>
+<body>
+    
+
+<div id="historyContainer">
+  <button onclick="addCall()">Call 999</button>
+
+  
+  <div id="callHistory">
+
+
+  </div>
+
+  <button onclick="clearHistory()" style="margin-top:10px; background:green; color:white;">Clear</button>
+</div>
+
+
+
+
+
+<script>
+
+function addCall() {
+  const now = new Date();
+  const time = now.toLocaleTimeString();
+  const date = now.toLocaleDateString();
+  
+  const card = document.createElement("div");
+  card.className = "call-card";
+  card.innerHTML = `<strong>জাতীয় জরুরি সেবা</strong><br>999<br>time |{date}`;
+  
+  document.getElementById("callHistory").appendChild(card);
+}
+
+function clearHistory() {
+  document.getElementById("callHistory").innerHTML = "";
+}</script>
+</body>
+</html>
